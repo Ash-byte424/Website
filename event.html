@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Technical Council</title>
+    <link rel="stylesheet" href="../html part/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>    
+        <nav>
+          <div><strong>ITC</strong></div>
+          <div>
+            <a href="../html part/index.html">Home</a>
+            <a href="../html part/about.html">About</a>
+            <a href="../html part/event.html">Events</a>
+            <a href="../html part/contact.html">Contact</a>
+          </div>
+        </nav>
+      </header>
+    
+      <section id="events">
+        <h1>Events</h1>
+        <div class="container">
+          <!-- Box 1 -->
+          <div class="stat-box">
+            <h2 class="stat-number blue">XLR8</h2>
+            <p class="stat-label">Electronics and robotics club</p>
+          </div>
+      
+          <!-- Box 2 -->
+          <div class="stat-box">
+            <h2 class="stat-number purple">RC PLANE</h2>
+            <p class="stat-label">Aeromodelling club</p>
+          </div>
+          <div class="stat-box">
+            <h2 class="stat-number purple">GCs</h2>
+            <p class="stat-label">Tech GC between Hostels</p>
+          </div>
+          <div class="stat-box">
+            <h2 class="stat-number purple">Freshie orientation</h2>
+          </div>
+      </section>
+    
+    
+      <footer>
+        &copy; 2025 ITC. All rights reserved.
+      </footer>
+    
+      <script>
+        const sections = document.querySelectorAll('section');
+    
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+    
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+        </script>
+
+</body>
+</html>

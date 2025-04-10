@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+  }
+
+  /* Make the background cover full viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom right, #121920,#071e34, #121920); /* or any other gradient */
+  font-family: sans-serif;
+  color: white;
+}
+
+
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 5;
+    z-index: 1000;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #1abc9c;
+  }
+
+  #home {
+    min-height: 100vh; /* makes it full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('https://wallpapercave.com/wp/wp8046982.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+  
+  #home h1 {
+    color: #ffffff; 
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 4rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+  }
+  
+  #home p {
+    color: #ffffff; 
+    font-family: Arial, Helvetica, sans-serif; /
+    font-size: 2rem;
+    font-weight: bold; 
+  }
+
+  section {
+    padding: 1rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    opacity: 0;
+
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    background-image: url('https://wallpapercave.com/wp/wp8046982.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  #about h1{
+    color: #ffffff; 
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 4rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #about p {
+    color: #ffffff; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.2rem; 
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+  }
+  
+  .stat-box {
+    width: 240px;
+    height: 160px;
+    background-color: #0b1120;
+    border: 1px solid #2e374d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .stat-label {
+    color: #d1d5db; 
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .blue {
+    color: #60a5fa; 
+  }
+  
+  .purple {
+    color: #c084fc; }
+
+  h1, h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  #events {
+    background-image: url('https://wallpapercave.com/wp/wp8046982.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Better visual effect */
+    padding: 4rem 2rem;
+    color: white;
+  }
+  
+  #events h1 {
+    font-family: 'Segoe UI', sans-serif; /* Fallback + cleaner look */
+    font-size: 3.5rem;
+    color: #ccc;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* For readability */
+  }
+  
+  /* Grid layout */
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Individual event card */
+  .event {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent card on bg */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  .event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Optional: headings inside cards */
+  .event h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #a0cfff;
+  }
+  
+  .event p {
+    font-size: 1rem;
+    color: #ddd;
+  }  
+
+  #contact{
+    background-image: url('https://wallpapercave.com/wp/wp8046982.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  #contact h2{
+    font-size: large;
+    color: #ffffff;
+  }
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input, form textarea {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  form button {
+    padding: 0.8rem;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition:  0.3s;
+  }
+
+  form button:hover {
+    background: #16a085;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #2c3e50;
+    color: white;
+  }

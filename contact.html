@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Technical Council</title>
+    <link rel="stylesheet" href="../html part/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>    
+        <nav>
+          <div><strong>ITC</strong></div>
+          <div>
+            <a href="../html part/index.html">Home</a>
+            <a href="../html part/about.html">About</a>
+            <a href="../html part/event.html">Events</a>
+            <a href="../html part/contact.html">Contact</a>
+          </div>
+        </nav>
+      </header>
+    
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="event.preventDefault(); alert('Thank you for reaching out!');">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    
+    
+      <footer>
+        &copy; 2025 ITC. All rights reserved.
+      </footer>
+    
+      <script>
+        const sections = document.querySelectorAll('section');
+    
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+    
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+        </script>
+
+</body>
+</html>
